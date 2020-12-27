@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EXTERNAL CSS -->
+  <link rel="stylesheet" href="about.styles.css">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <title>SkillDrive</title>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a class="header__logo" href="#" role="link" tabindex="0">SkillDrive</a>
+    <nav class="header__nav" role="navigation">
+      <a class="header__link" href="#" role="link" tabindex="1">About us</a>
+      <a class="header__link" href="#" role="link" tabindex="2">Terms</a>
+      <a class="header__link" href="#" role="link" tabindex="3">FAQ</a>
+    </nav>
+    <button class="header__button" aria-label="Button for login" tabindex="4">Login</button>
+  </header>
+
+  <!-- ABOUT US-->
+  <section class="about" aria-labelledby="about" role="main">
+    <img class="about__img" src="./assets/team.svg" alt="Picture of team members">
+    <h1 class="about__heading">About us</h1>
+    <p class="about__description" id="about">This training project was created in order to get experience in the
+      development of
+      real live web
+      applications.This service imitates the work of car sharing, in which you can not only rent cars, but also
+      rent
+      them out.</p>
+  </section>
+
+  <!-- CONTATCS -->
+  <section class="contacts">
+    <h2 class="contacts__heading">Contacts</h2>
+    <div class="contacts__container">
+      <div class="contacts__item">
+        <p class="contacts__caption">Email</p>
+        <p class="contacts__method">drive@skillfactory.com</p>
+      </div>
+      <div class="contacts__delimiter" role="separator"></div>
+      <div class="contacts__item">
+        <p class="contacts__caption">Telephone</p>
+        <p class="contacts__method">+7 912 123-45-67</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team">
+    <h2 class="team__heading" aria>Team</h2>
+    <div class="team__container">
+      <div>
+        <img class="team__img" src="./assets/team1.png" alt="Team member photo">
+        <p class="team__person">Peter Nowland</p>
+        <p class="team__role"><abbr title="Chief Executive Officer">CEO</abbr></p>
+      </div>
+      <div>
+        <img class="team__img" src="./assets/team2.png" alt="Team member photo">
+        <p class="team__person">Abraham Clausen </p>
+        <p class="team__role">Frontend developer</p>
+      </div>
+      <div>
+        <img class="team__img" src="./assets/team3.png" alt="Team member photo">
+        <p class="team__person">Russell Elliott</p>
+        <p class="team__role">Backend developer</p>
+      </div>
+      <div>
+        <img class="team__img" src="./assets/team4.png" alt="Team member photo">
+        <p class="team__person">Kurt Parkes</p>
+        <p class="team__role">Designer</p>
+      </div>
+      <div>
+        <img class="team__img" src="./assets/team5.png" alt="Team member photo">
+        <p class="team__person">Rosann Gust</p>
+        <p class="team__role">Copywriter</p>
+      </div>
+      <div>
+        <img class="team__img" src="./assets/team6.png" alt="Team member photo">
+        <p class="team__person">Desiree Knecht</p>
+        <p class="team__role"><abbr title="Social Media Merketing">SMM</abbr></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__copyright">© SkillDrive Inc. 2020</p>
+    <div>
+      <a class="footer__icon" href="https://www.vk.com" target="_blank"><img src="./assets/vk.svg" alt="VK icon"
+          aria-label="Link to Vkontakte main page"></a>
+      <a class="footer__icon" href="https://www.instagram.com" target="_blank"><img src="./assets/instagram.svg"
+          alt="Instagram icon" aria-label="Link to Instagram main page"></a>
+      <a class="footer__icon foter__icon--last" href="https://www.facebook.com" target="_blank"><img "
+          src=" ./assets/facebook.svg" alt="Facebook icon" aria-label="Link to Facebook main page"></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
