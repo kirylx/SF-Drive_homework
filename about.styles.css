@@ -35,6 +35,7 @@ a {
   font: 500 16px Roboto, sans-serif;
   height: 43px;
   margin-right: 40px;
+  outline: none;
   width: 106px;
 }
 
