@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- EXTERNAL CSS -->
-  <link rel="stylesheet" href="module18.styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
 
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,6 +16,8 @@
   <title>SkillDrive</title>
 </head>
 
+<noscript> <h4 class="warning">{Your browser doesn't support JavaScript. You may experience major issues}</h4></noscript>
+
 <body>
 
   <!-- HEADER -->
@@ -23,18 +25,20 @@
     <header class="header">
       <a class="header__logo" href="#" role="link" tabindex="0">SkillDrive</a>
       <nav class="header__nav" role="navigation">
-        <a class="header__link" href="#" role="link" tabindex="1">About us</a>
+        <a class="header__link" href="./about.html" role="link" tabindex="1">About us</a>
         <a class="header__link" href="#" role="link" tabindex="2">Terms</a>
-        <a class="header__link" href="#" role="link" tabindex="3">FAQ</a>
+        <a class="header__link" href="./faq.html" role="link" tabindex="3">FAQ</a>
       </nav>
       <button class="header__button" aria-label="Button for login" tabindex="4">Login</button>
+      <a class="header__navbars" href="#" role="link"><img id="navbarsIcon" src="./assets/menu-24px.svg" alt="Menu icon"></a>
+
     </header>
 
     <!-- ABOUT US-->
     <section class="about" aria-labelledby="about" role="main">
       <img class="about__img" src="./assets/team.svg" alt="Picture of team members">
       <h1 class="about__heading">About us</h1>
-      <p class="about__description" id="about">This training project was created in order to get experience in the
+      <p class="about__description">This training project was created in order to get experience in the
         development of
         real live web
         applications.This service imitates the work of car sharing, in which you can not only rent cars, but also
@@ -112,5 +116,7 @@
   </footer>
 
 </body>
+
+<script src="script.js"></script>
 
 </html>
