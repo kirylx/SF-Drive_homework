@@ -6,9 +6,9 @@ const navbarsIcon = document.querySelector("#navbarsIcon");
 const toggleNavbar = function toggleResponsiveNavbarWhenClicking() {
   navbars.classList.toggle("navbars-visible")
   if (navbars.classList.contains("navbars-visible")) {
-    navbarsIcon.src = "./assets/close-24px.svg"
+    navbarsIcon.src = "../assets/close-24px.svg"
   } else {
-    navbarsIcon.src = "./assets/menu-24px.svg"
+    navbarsIcon.src = "../assets/menu-24px.svg"
   }
   
 };
@@ -22,9 +22,9 @@ const collbuttons = document.querySelectorAll(".faq__collbutton")
 
 const toggleCollapsible = function toggleCollapsibleElementsWhenCLicking(event) {
   const answer = event.target.nextElementSibling;
-  event.target.classList.toggle("faq__collbutton-open");
+  event.target.classList.toggle("faq__collbutton_open");
   event.target.querySelector("img").classList.toggle("rotate180")
-  answer.classList.toggle("faq__answer-visible");
+  answer.classList.toggle("faq__answer_visible");
  }
  
 collbuttons.forEach(collbutton => {

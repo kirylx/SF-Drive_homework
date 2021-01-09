@@ -1,0 +1,394 @@
+// SASS VARIABLES
+// color:
+$warning-color: red;
+$header-background-color: white;
+$header-hover-color: #f7f9fb;
+$header-link-hover-color: #4f4f4f;
+$header-active-color: #4f4f4f;
+$footer-background-color: #3f3d56;
+$footer-color: #ffffff;
+$contacts-background-color: #f7f9fb;
+$delimiter-color: #c8c8cf;
+$contacts-caption-color: #4f4f4f;
+$team-role-color: #828282;
+$faq-background-color: #f7f7f8;
+$faq-collbutton-color: #61a199;
+$faq-collbutton-hover-color: rgba(97, 161, 153, 0.1);
+$faq-collbutton-open-color: rgba(97, 161, 153, 0.15);
+// font:
+$login-button-font: 500 16px Roboto, sans-serif;
+$header-main-font: 16px Roboto, sans-serif;
+$hedaer-logo-font: bold 24px Rubik, sans-serif;
+$footer-main-font: 16px Roboto, sans-serif;
+$heading-font: 700 64px Roboto, sans-serif;
+$description-font: 400 24px Roboto, sans-serif;
+$section-heading-font: 500 48px Roboto, sans-serif;
+$caption-font: 14px/20.62px Roboto, sans-serif;
+$contacts-method-font: 20px/29.46px Roboto, sans-serif;
+$team-person-font: 20px Roboto, sans-serif;
+$faq-collbutton-font: 400 20px/29.49px Roboto, sans-serif;
+$faq-answer-font: 400 20px/29.49px Roboto, sans-serif;
+
+// mixin:
+@mixin for-desktop-up {
+  @media all and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-mobile-down {
+  @media all and (max-width: 414px) {
+    @content;
+  }
+}
+
+/* GENERAL */
+html body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button > * {
+  pointer-events: none;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+#content {
+  min-height: calc(100vh - 124px);
+}
+.warning {
+  color: $warning-color;
+}
+
+/* HEADER */
+
+.header {
+  align-items: center;
+  background-color: $header-background-color;
+  display: flex;
+  height: 70px;
+  opacity: 0.85;
+  padding-left: 40px;
+  position: sticky;
+  top: 0;
+
+  &__logo {
+    cursor: pointer;
+    font: $hedaer-logo-font;
+    transition: font-size 150ms;
+
+    &:hover {
+      font-size: 28px;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+    display: none;
+  }
+
+  &__navbars {
+    cursor: pointer;
+    margin-right: 30px;
+    margin-left: auto;
+  }
+
+  &__link {
+    cursor: pointer;
+    font: $header-main-font;
+    margin-right: 30px;
+
+    &:hover {
+      color: $header-link-hover-color;
+    }
+  }
+
+  &__button {
+    background-color: inherit;
+    border-radius: 6px;
+    border: 1px solid rgba(27, 27, 27, 0.4);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none;
+    font: $login-button-font;
+    height: 43px;
+    margin-right: 40px;
+    width: 106px;
+
+    &:hover {
+      background-color: $header-hover-color;
+    }
+
+    &:active {
+      color: $header-active-color;
+    }
+  }
+
+  @include for-desktop-up {
+    &__nav {
+      display: block;
+    }
+
+    &__button {
+      display: block;
+    }
+
+    &__navbars {
+      display: none;
+    }
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: $footer-background-color;
+  display: flex;
+  flex-direction: column;
+  height: 124px;
+  padding-left: 40px;
+
+  @include for-desktop-up {
+    & {
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  @include for-desktop-up {
+    & div {
+      margin-left: auto;
+    }
+  }
+
+  &__copyright {
+    font: $footer-main-font;
+    color: $footer-color;
+    opacity: 0.4;
+  }
+
+  & div:last-child {
+    margin-right: 21px;
+  }
+
+  &__icon {
+    cursor: pointer;
+    margin-right: 19px;
+
+    & img:hover {
+      filter: brightness(0.75);
+    }
+  }
+}
+
+/* ABOUT US */
+/* FAQ */
+
+.about,
+.faq {
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    margin: 100px auto 0 auto;
+
+    @include for-mobile-down {
+      & {
+        width: 90vw;
+      }
+    }
+  }
+
+  &__heading {
+    font: $heading-font;
+    margin: 60px auto 0 auto;
+  }
+
+  &__description {
+    font: $description-font;
+    line-height: 147.3%;
+    margin: 30px auto 0 auto;
+    max-width: 925px;
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
+/* CONTACTS */
+
+.contacts {
+  background-color: $contacts-background-color;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+
+  &__heading {
+    font: $section-heading-font;
+    margin: 60px auto 0 auto;
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+
+    @include for-desktop-up {
+      & {
+        flex-direction: row;
+        margin-top: 40px;
+        padding-bottom: 100px;
+      }
+    }
+  }
+
+  &__item {
+    height: 56px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 264px;
+
+    @include for-desktop-up {
+      & {
+        height: 56px;
+        text-align: center;
+        width: 264px;
+      }
+    }
+  }
+
+  @include for-desktop-up {
+    &__delimiter {
+      background: $delimiter-color;
+      height: 62px;
+      margin: 0 68px;
+      width: 1px;
+    }
+  }
+
+  &__caption {
+    color: $contacts-caption-color;
+    font: $caption-font;
+    margin: 2px 0;
+  }
+
+  &__method {
+    font: $contacts-method-font;
+    margin: 3px 0;
+  }
+}
+
+/* TEAM */
+
+.team {
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    font: $section-heading-font;
+    margin: 60px auto 0 auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 60px;
+    max-width: 1110px;
+
+    & div {
+      height: 260px;
+      margin: 38px 30px;
+      text-align: center;
+      width: 196px;
+    }
+
+    @include for-desktop-up {
+      & {
+        margin: 0 auto 120px;
+      }
+    }
+  }
+
+  &__img {
+    height: 180px;
+    width: 180px;
+  }
+
+  &__person {
+    font: $team-person-font;
+    margin: 22px 0 8px 0;
+  }
+
+  &__role {
+    color: $team-role-color;
+    font: $caption-font;
+    margin: 2px 0;
+  }
+}
+
+/* FAQ */
+
+.faq__collapsible {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto 120px auto;
+  width: 70vw;
+
+  @include for-desktop-up {
+    & {
+      margin: 30px auto 120px auto;
+    }
+  }
+}
+
+.faq__collbutton {
+  background-color: $faq-background-color;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  margin-bottom: 15px;
+  font: $faq-collbutton-font;
+  justify-content: space-between;
+  padding: 18px 22px 18px 22px;
+  text-align: left;
+
+  &:hover {
+    background: $faq-collbutton-hover-color;
+  }
+
+  &:active {
+    color: $faq-collbutton-open-color;
+  }
+
+  &_open {
+    background: $faq-collbutton-open-color;
+    color: $faq-collbutton-color;
+  }
+}
+
+.faq__chevron {
+  margin-left: 30px;
+}
+
+.faq__answer {
+  display: none;
+  font: $faq-answer-font;
+  margin-bottom: 40px;
+  max-width: 784px;
+  padding: 0 40px 0 20px;
+
+  &_visible {
+    display: block;
+  }
+}

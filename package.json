@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w --source-map true styles/styles.scss styles/styles.css"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
 }
